@@ -6,7 +6,7 @@ RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 ENV CARGO_BUILD_JOBS=1
 ENV CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
-RUN pip install nomadnet --no-binary :all:
+RUN pip install nomadnet
 
 FROM python:alpine
 
