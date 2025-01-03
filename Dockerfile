@@ -4,6 +4,7 @@ RUN apk add --no-cache build-base libffi-dev cargo openssl-dev
 
 RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
+ENV CARGO_BUILD_JOBS=1
 RUN pip install nomadnet --no-binary :all:
 
 FROM python:alpine
