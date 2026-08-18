@@ -1,8 +1,8 @@
 FROM python:alpine
 
 RUN python -m venv /opt/venv
-ENV PATH="/opt/venv/bin:$PATH"
-ENV PYTHONUNBUFFERED="yes"
+ENV PATH="/opt/venv/bin:$PATH" \
+    PYTHONUNBUFFERED="yes"
 
 RUN pip install nomadnet
 
